@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KLENT enables efficient search-free reinforcement learning for two-player games with convergence guarantees.">
+  <meta name="keywords" content="KLENT, reinforcement learning, two-player games, regularized policy optimization, model-free RL, ICML 2026">
+  <meta property="og:title" content="KLENT: Efficient Search-Free RL for Two-Player Games">
+  <meta property="og:description" content="Efficient search-free RL for two-player games with convergence guarantees.">
+  <meta property="og:type" content="website">
+  <title>KLENT: Efficient Search-Free RL for Two-Player Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <p class="venue">ICML 2026</p>
+      <h1>Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games</h1>
+
+      <p class="authors">
+        <span>Kazuki Ota<sup>1,2</sup></span>
+        <span>Takayuki Osa<sup>2</sup></span>
+        <span>Motoki Omura<sup>1</sup></span>
+        <span>Tatsuya Harada<sup>1,2</sup></span>
+      </p>
+      <p class="affiliations">
+        <span><sup>1</sup>The University of Tokyo, Japan</span>
+        <span><sup>2</sup>RIKEN Center for Advanced Intelligence Project, Japan</span>
+      </p>
+
+      <div class="links" aria-label="paper links">
+        <a class="button" href="static/paper/klent_icml2026.pdf">Paper</a>
+        <a class="button" href="static/paper/klent_icml2026_poster.pdf">Poster</a>
+        <a class="button" href="https://github.com/KazukiOhta/klent">Code</a>
+        <a class="button" href="#bibtex">BibTeX</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section tldr-section">
+      <div class="container narrow">
+        <h2 class="tldr-label">TL;DR</h2>
+        <p class="tldr">Efficient search-free RL for two-player games with convergence guarantees.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>Abstract</h2>
+        <p>
+          Two-player games such as board games have long been used as traditional benchmarks for reinforcement learning.
+          This work revisits a policy optimization method with reverse Kullback-Leibler regularization and entropy regularization and analyzes this combination in two-player zero-sum settings from theoretical and empirical perspectives.
+          From a theoretical perspective, we investigate the stability of the policy update rule in two theoretical settings: game-theoretic normal-form games and finite-length games.
+          We provide novel convergence guarantees and verify our theoretical results through numerical experiments on synthetic games.
+          From an empirical perspective, we derive a practical model-free reinforcement learning algorithm based on the regularized policy optimization.
+          We validate the training efficiency of our algorithm through comprehensive experiments on five board games: Animal Shogi, Gardner Chess, Go, Hex, and Othello.
+          Experimental results show that our agent learns more efficiently than existing methods across environments.
+        </p>
+      </div>
+    </section>
+
+    <section class="section soft-panel">
+      <div class="container narrow">
+        <h2>Key Question</h2>
+        <p>
+          Search-based approaches have achieved strong performance in board games, but their look-ahead search makes training expensive.
+          We ask whether a pure model-free RL algorithm can learn efficiently in two-player games without search during training.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>Our Approach</h2>
+        <p>
+          KLENT combines reverse-KL regularization for gradual policy updates and entropy regularization for exploration.
+          The resulting analytical policy update is used for action sampling, while lambda-returns provide stable action-value learning targets.
+        </p>
+        <figure class="inline-figure concept-figure">
+          <img src="static/images/concept.png" alt="Conceptual comparison between AlphaZero and KLENT">
+          <figcaption>
+            KLENT replaces look-ahead search with an analytical policy update and learns action values directly.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section soft-panel">
+      <div class="container narrow">
+        <h2>Theoretical Analysis</h2>
+        <p>
+          We analyze KLENT in normal-form games and finite-length games.
+          In normal-form games, KLENT is linearly and locally convergent to the entropy-regularized Nash equilibrium under the stated condition.
+          In finite-length games, KLENT converges to the entropy-regularized Nash equilibrium through backward-induction-style analysis.
+          We also verify these theoretical predictions with numerical experiments on synthetic games.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>Experiments</h2>
+        <p>
+          We evaluate KLENT on five board games: Animal Shogi, Gardner Chess, 9x9 Go, Hex, and Othello.
+          KLENT achieves up to 4x higher training efficiency than existing methods without model-based search during training.
+          Ablation studies show that KL regularization, entropy regularization, and lambda-returns are all important for consistently efficient learning.
+        </p>
+        <figure class="inline-figure results-figure">
+          <img src="static/images/main_results.png" alt="Average performance across five board games">
+          <figcaption>
+            Average performance across five board games. KLENT achieves up to 4x higher training efficiency than Gumbel AlphaZero.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section soft-panel">
+      <div class="container narrow">
+        <h2>Conclusion</h2>
+        <p>
+          Model-free RL can effectively learn in two-player games by properly revisiting regularized policy optimization.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="bibtex">
+      <div class="container narrow">
+        <h2>BibTeX</h2>
+        <pre><code>@inproceedings{ota2026revisiting,
+  title     = {Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games},
+  author    = {Ota, Kazuki and Osa, Takayuki and Omura, Motoki and Harada, Tatsuya},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+  year      = {2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container narrow">
+      <p>
+        This project page is inspired by the Nerfies and CPO project pages.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
