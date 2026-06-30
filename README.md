@@ -1,9 +1,9 @@
-# KLENT Supplementary Code
+# Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games
 
 This repository provides supplementary code for the ICML 2026 paper
 **"Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games."**
 
-The code contains a compact implementation of KLENT for training and evaluating agents in board game environments.
+The code contains a compact implementation of our algorithm KLENT for training and evaluating agents in board game environments.
 
 ## Installation
 
