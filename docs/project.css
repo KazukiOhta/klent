@@ -1,0 +1,153 @@
+.project-page {
+  padding-top: 36px;
+}
+
+.project-header {
+  padding: 0 0 0.6rem;
+  text-align: center;
+}
+
+.project-header h1 {
+  max-width: 790px;
+  margin: 0 auto 0.9rem;
+  font-size: 30px;
+}
+
+.venue {
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.authors {
+  margin-bottom: 0.2rem;
+}
+
+.authors sup,
+.affiliations sup {
+  margin-left: 0.08rem;
+  font-size: 10px;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.affiliations sup {
+  margin-right: 0.12rem;
+}
+
+.affiliations {
+  margin-bottom: 0.85rem;
+  color: var(--muted);
+}
+
+.project-links {
+  margin: 0.9rem 0 0;
+}
+
+.project-tags {
+  justify-content: center;
+  margin: 1rem auto 0;
+}
+
+.project-figure {
+  margin: 1.15rem 0 1.55rem;
+}
+
+.project-figure.teaser {
+  margin-top: 1.05rem;
+  margin-bottom: 1.85rem;
+}
+
+.figure-image {
+  display: block;
+  width: 100%;
+  background: #ffffff;
+}
+
+.figure-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #eef1f4;
+  color: #7a838d;
+  font-size: 13px;
+}
+
+.project-figure figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.equation-block {
+  overflow-x: auto;
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  background: var(--soft);
+}
+
+.equation-block mjx-container {
+  margin: 0 !important;
+}
+
+.equation-mobile {
+  display: none;
+}
+
+.bibtex {
+  overflow-x: auto;
+  margin: 0.4rem 0 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--soft);
+  color: #32404c;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.bibtex code {
+  font-family: inherit;
+}
+
+@media (max-width: 680px) {
+  .project-page {
+    padding-top: 24px;
+  }
+
+  .project-header {
+    padding-top: 0;
+  }
+
+  .project-header h1 {
+    font-size: 25px;
+    text-align: left;
+  }
+
+  .project-header,
+  .project-tags {
+    text-align: left;
+  }
+
+  .project-tags {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 550px) {
+  .equation-desktop {
+    display: none;
+  }
+
+  .equation-mobile {
+    display: block;
+  }
+}
