@@ -118,12 +118,6 @@
   font-family: inherit;
 }
 
-.project-note {
-  margin: 1.3rem 0 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 @media (max-width: 680px) {
   .project-page {
     padding-top: 24px;
