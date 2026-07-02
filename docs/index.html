@@ -176,9 +176,17 @@
           <div class="equation-desktop">
             \[
             \underset{\pi'}{\text{maximize}} \quad
-            \mathbb{E}_{A \sim \pi'(\cdot|s)}[Q^\pi(s,A)]
-            - \beta D_{\text{KL}}(\pi'(\cdot|s)\|\pi(\cdot|s))
-            + \alpha H(\pi'(\cdot|s)).
+            \underbrace{
+              \mathbb{E}_{A \sim \pi'(\cdot|s)}[Q^\pi(s,A)]
+            }_{\text{expected action value}}
+            -
+            \underbrace{
+              \beta D_{\text{KL}}(\pi'(\cdot|s)\|\pi(\cdot|s))
+            }_{\text{proximity to current policy}}
+            +
+            \underbrace{
+              \alpha H(\pi'(\cdot|s))
+            }_{\text{entropy bonus}}.
             \]
           </div>
           <div class="equation-mobile">
