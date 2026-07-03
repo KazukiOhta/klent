@@ -1,7 +1,14 @@
 # Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games
 
+[![Project Page](https://img.shields.io/badge/project-page-1f6feb)](https://kazukiohta.github.io/klent/)
+[![Paper](https://img.shields.io/badge/paper-arXiv-b31b1b)](https://arxiv.org/abs/2602.10894)
+[![Poster](https://img.shields.io/badge/poster-PDF-2ea44f)](https://kazukiohta.github.io/klent/assets/poster.pdf)
+
 This repository provides supplementary code for the ICML 2026 paper
 [**"Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games."**](https://kazukiohta.github.io/klent/)
+
+For an overview of the method, figures, poster, and BibTeX, please see the
+[project page](https://kazukiohta.github.io/klent/).
 
 The code contains a compact implementation of our algorithm KLENT for training and evaluating agents in board game environments.
 
